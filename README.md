@@ -16,7 +16,7 @@
          在將資料寫入資料庫之前，需要先建立或獲取一個 Collection。請確保使用以下參數來建立 Collection：
           - **name**: `"TRAVEL"`，這是此 Collection 的名稱，用於標識此數據集的用途。
           - **metadata**: `{"hnsw:space": "cosine"}`，這是設定查詢相似度計算的參數，`cosine` 表示使用餘弦相似度來進行距離計算。
-   - 2. Metadata 的內容
+   - 3. Metadata 的內容
       在初始化資料庫時，需從 CSV 檔案中提取每條記錄的相關欄位，並將其作為 Metadata 存入 ChromaDB。Metadata 包含以下資訊：
          - **file_name**：資料來源檔案名稱（`COA_OpenData.csv`）。
          - **name**：店家名稱。
@@ -26,7 +26,7 @@
          - **city**：店家所在城市。
          - **town**：店家所在城鎮。
          - **date**：資料創建日期，需從 `CreateDate` 欄位轉換為時間戳格式（秒）。
-   - 3. 文件數據（`documents`）
+   - 4. 文件數據（`documents`）
      將 CSV 檔案中的 `HostWords` 欄位內容提取作為文本數據存入 ChromaDB。這些數據是查詢時進行相似度計算的核心。
 3. **方法**：實作 `generate_hw01()` 方法，回傳一個collection物件。
 4. **輸出格式**：回傳一個 collection物件`chromadb.api.models.Collection.Collection` 
