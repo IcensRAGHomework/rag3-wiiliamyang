@@ -3,6 +3,18 @@
 ## 作業內容
 
 請使用 **chromadb** 套件完成以下作業，將 `COA_OpenData.csv` 檔案寫入 chroma.sqlite3(需要上傳該檔案)，並在 **`student_assignment.py`** 中實作以下方法：`generate_hw01-03(question)`
+#### 創建 `.env` 文件（供學生使用）
+
+請在項目根目錄下創建一個名為 `.env` 的文件，並在其中定義環境變數，該文件將提供`model_configurations.py`所需的下列參數內容。參加該作業時，會提供具體的內容給學生。以下是一個示例：
+
+```makefile
+AZURE_OPENAI_EMBEDDING_ENDPOINT=your_endpoint_here
+AZURE_OPENAI_EMBEDDING_KEY=your_api_key_here
+AZURE_OPENAI_DEPLOYMENT_EMBEDDING=your_deployment_embedding_here
+AZURE_OPENAI_VERSION=your_api_version_here
+AZURE_OPENAI_DEPLOYMENT_EMBEDDING_MODEL_NAME=your_deployment_embedding_model_name
+AZURE_OPENAI_TYPE=your_openai_type_here
+```
 
 ---
 
