@@ -5,7 +5,10 @@
 請使用 **chromadb** 套件完成以下作業，將 `COA_OpenData.csv` 檔案寫入 chroma.sqlite3(需要上傳該檔案)，並在 **`student_assignment.py`** 中實作以下方法：`generate_hw01-03(question)`
 #### 創建 `.env` 文件（供學生使用）
 
-請在項目根目錄下創建一個名為 `.env` 的文件，並在其中定義環境變數，該文件將提供`model_configurations.py`所需的下列參數內容。參加該作業時，會提供具體的內容給學生。以下是一個示例：
+在此作業中，您將需要在本地開發環境中設置必要的參數來支持程式運行。為了簡化環境變數的管理，請在項目根目錄下創建一個名為 `.env` 的文件，並在其中定義環境變數。
+
+這個 `.env` 文件的主要用途是為了讓您能夠在自己的電腦上進行實作，並為`model_configurations.py`文件提供所需的參數。參加作業時，我們會提供具體的參數值供您填寫。以下是 .env 文件的範例格式：
+
 
 ```makefile
 AZURE_OPENAI_EMBEDDING_ENDPOINT=your_endpoint_here
@@ -15,6 +18,11 @@ AZURE_OPENAI_VERSION=your_api_version_here
 AZURE_OPENAI_DEPLOYMENT_EMBEDDING_MODEL_NAME=your_deployment_embedding_model_name
 AZURE_OPENAI_TYPE=your_openai_type_here
 ```
+#### 注意事項
+
+- **請勿將 `.env` 文件上傳到任何版本控制系統（例如 GitHub）**，以避免洩漏敏感資訊。
+- `.env` 文件僅供您在本地環境中使用，不需要提交作業時包含在內。
+
 
 ---
 
