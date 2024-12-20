@@ -41,8 +41,7 @@ AZURE_OPENAI_TYPE=your_openai_type_here
    - 4. 文件數據（`documents`）
      將 CSV 檔案中的 `HostWords` 欄位內容提取作為文本數據存入 ChromaDB。這些數據是查詢時進行相似度計算的核心。
 3. **方法**：實作 `generate_hw01()` 方法，回傳一個collection物件。
-4. **輸出格式**：回傳一個 collection物件`chromadb.api.models.Collection.Collection` 
-
+4. **輸出格式**：回傳一個 collection物件`chromadb.api.models.Collection.Collection` (需要先上傳chroma.sqlite3該檔案)
 ---
 
 ### 作業2
