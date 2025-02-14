@@ -15,7 +15,7 @@ AZURE_OPENAI_EMBEDDING_ENDPOINT=your_endpoint_here
 AZURE_OPENAI_EMBEDDING_KEY=your_api_key_here
 AZURE_OPENAI_DEPLOYMENT_EMBEDDING=your_deployment_embedding_here
 AZURE_OPENAI_VERSION=your_api_version_here
-AZURE_OPENAI_DEPLOYMENT_EMBEDDING_MODEL_NAME=your_deployment_embedding_model_name
+AZURE_OPENAI_DEPLOYMENT_EMBEDDING_MODEL_NAME="text-embedding-ada-002"
 AZURE_OPENAI_TYPE=your_openai_type_here
 ```
 #### 注意事項
