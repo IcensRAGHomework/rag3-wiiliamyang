@@ -69,7 +69,7 @@ jobs:
       
           if [[ -z "$SUBMISSION_TIMESTAMP" || "$SUBMISSION_TIMESTAMP" == "null" ]]; then
             echo "Warning: No submission timestamp found for user ${{ github.actor }}"
-            SUBMISSION_TIMESTAMP="Empty"
+            SUBMISSION_TIMESTAMP=$(date -u +"%Y-%m-%d %H:%M:%S UTC")
           fi
       
           # Save to environment variables
