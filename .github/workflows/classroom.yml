@@ -13,7 +13,7 @@ jobs:
         run: |
           CLASSROOM_ID=$(curl -s -H "Authorization: token ${{ secrets.ORG_PAT_TOKEN_2 }}" \
                            -H "Accept: application/vnd.github.v3+json" \
-                           https://api.github.com/classrooms | jq -r '.[1].id')
+                           https://api.github.com/classrooms | jq -r '.[0].id')
           echo "CLASSROOM_ID=$CLASSROOM_ID" >> $GITHUB_ENV
 
       - name: Fetch Assignment Info
@@ -30,8 +30,8 @@ jobs:
           fi
       
           # Extract assignment info
-          ASSIGNMENT_ID=$(echo "$ASSIGNMENT_INFO" | jq -r '.[] | select(.slug=="rag3-demo") | .id')
-          ASSIGNMENT_NAME=$(echo "$ASSIGNMENT_INFO" | jq -r '.[] | select(.slug=="rag3-demo") | .title')
+          ASSIGNMENT_ID=$(echo "$ASSIGNMENT_INFO" | jq -r '.[] | select(.slug=="rag3") | .id')
+          ASSIGNMENT_NAME=$(echo "$ASSIGNMENT_INFO" | jq -r '.[] | select(.slug=="rag3") | .title')
       
           # Validate extraction
           if [[ -z "$ASSIGNMENT_ID" || -z "$ASSIGNMENT_NAME" || "$ASSIGNMENT_ID" == "null" ]]; then
